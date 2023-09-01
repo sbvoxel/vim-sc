@@ -6,14 +6,14 @@ if exists("b:current_syntax")
 endif
 let b:current_syntax = "sc"
 
-syn keyword scStorage const extern packed export pub file_private noalias inline compt let var nakedcc stdcallcc volatile allowzero align linksection threadlocal
-syn keyword scStructure struct enum union error alias
+syn keyword scStorage const extern packed export pub file_private noalias inline let var volatile align threadlocal
+syn keyword scStructure struct enum union
 syn keyword scStatement break return continue asm defer errdefer unreachable try catch async await suspend resume cancel when label goto
 syn keyword scConditional static ef annars if else switch and or orelse case default
 syn keyword scRepeat while for
 
 syn keyword scConstant null nullptr undefined
-syn keyword scKeyword fn usingnamespace test import cimport use cast reinterpret_cast unsafe_cast cast_unsafe type
+syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type
 syn keyword scType bool f16 f32 f64 f128 void noreturn auto float double
 syn keyword scType i0 u0 isize  usize
 
@@ -22,21 +22,8 @@ syn keyword scBoolean true false
 syn match scType "\v<[iu][1-9]\d*>"
 
 syn match scOperator display "\%(+%\?\|-%\?\|/\|*%\?\|=\|\^\|&\|?\||\|!\|>\|<\|%\|<<%\?\|>>\)=\?"
-syn match scArrowCharacter display "->"
 
-syn match scBuiltinFn "\v\@(addWithOverflow|ArgType|atomicLoad|bitCast|breakpoint)>"
-syn match scBuiltinFn "\v\@(alignCast|alignOf|cDefine|cImport|cInclude)>"
-syn match scBuiltinFn "\v\@(cUndef|canImplicitCast|clz|cmpxchgWeak|cmpxchgStrong|compileError)>"
-syn match scBuiltinFn "\v\@(compileLog|ctz|popCount|divExact|divFloor|divTrunc)>"
-syn match scBuiltinFn "\v\@(embedFile|export|tagName|TagType|errorName)>"
-syn match scBuiltinFn "\v\@(errorReturnTrace|fence|fieldParentPtr|field|unionInit)>"
-syn match scBuiltinFn "\v\@(frameAddress|import|inlineCall|newStackCall|intToPtr|IntType)>"
-syn match scBuiltinFn "\v\@(maxValue|memberCount|memberName|memberType)>"
 syn match scBuiltinFn "\v\@(memcpy|memset|minValue|mod|mulWithOverflow)>"
-syn match scBuiltinFn "\v\@(noInlineCall|bitOffsetOf|byteOffsetOf|OpaqueType|panic|ptrCast)>"
-syn match scBuiltinFn "\v\@(ptrToInt|rem|returnAddress|setCold)>"
-syn match scBuiltinFn "\v\@(setRuntimeSafety|setEvalBranchQuota|setFloatMode)>"
-syn match scBuiltinFn "\v\@(setGlobalLinkage|setGlobalSection|shlExact|This|hasDecl|hasField)>"
 syn match scBuiltinFn "\v\@(shlWithOverflow|shrExact|sizeOf|sizeof|sqrt|byteSwap|subWithOverflow|intCast|floatCast|intToFloat|floatToInt|boolToInt|errSetCast)>"
 syn match scBuiltinFn "\v\@(truncate|typeId|typeInfo|typeName|typeOf|typeof|atomicRmw|bytesToSlice|sliceToBytes)>"
 syn match scBuiltinFn "\v\@(intToError|errorToInt|intToEnum|enumToInt|setAlignStack|frame|Frame|frameSize|bitReverse|Vector)>"
@@ -90,7 +77,6 @@ hi def link scEscapeError Error
 hi def link scBoolean Boolean
 hi def link scConstant Constant
 hi def link scNumber Number
-hi def link scArrowCharacter scOperator
 hi def link scOperator Operator
 hi def link scStorage StorageClass
 hi def link scStructure Structure
