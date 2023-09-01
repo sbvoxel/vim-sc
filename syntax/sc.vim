@@ -1,11 +1,12 @@
 " Vim syntax file
+" This is clearly adapted (incompletely) from Zig
 
 if exists("b:current_syntax")
   finish
 endif
 let b:current_syntax = "sc"
 
-syn keyword scStorage const extern packed export pub file_private priv noalias inline compt let var nakedcc stdcallcc volatile allowzero align linksection threadlocal
+syn keyword scStorage const extern packed export pub file_private noalias inline compt let var nakedcc stdcallcc volatile allowzero align linksection threadlocal
 syn keyword scStructure struct enum union error alias
 syn keyword scStatement break return continue asm defer errdefer unreachable try catch async await suspend resume cancel when label goto
 syn keyword scConditional static ef annars if else switch and or orelse case default
