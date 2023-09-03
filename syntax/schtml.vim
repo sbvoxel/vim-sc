@@ -5,5 +5,5 @@ runtime! syntax/html.vim
 runtime! syntax/sc.vim
 
 syntax match schtmlKeyword /@\ze\w\+/
-syntax match schtmlKeyword /@model\|@render_page/
+syntax match schtmlKeyword /@model\|@render_page\|@render_body\|@layout/
 hi def link schtmlKeyword Keyword
