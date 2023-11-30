@@ -8,12 +8,12 @@ let b:current_syntax = "sc"
 
 syn keyword scStorage const extern packed export pub noalias inline let var volatile align threadlocal
 syn keyword scStructure struct class enum union
-syn keyword scStatement break return continue asm defer errdefer unreachable try catch async await suspend resume cancel when label goto interface
+syn keyword scStatement break return continue asm defer errdefer unreachable try catch async await suspend resume cancel when label goto
 syn keyword scConditional static ef annars if else switch and or orelse case default
 syn keyword scRepeat while for
 
 syn keyword scConstant null nullptr undefined
-syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this operator
+syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this operator interface
 syn keyword scType bool f16 f32 f64 f128 void noreturn auto float double
 syn keyword scType i0 u0 isize usize int uint
 
