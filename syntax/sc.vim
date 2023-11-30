@@ -13,7 +13,7 @@ syn keyword scConditional static ef annars if else switch and or orelse case def
 syn keyword scRepeat while for
 
 syn keyword scConstant null nullptr undefined
-syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this
+syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this operator
 syn keyword scType bool f16 f32 f64 f128 void noreturn auto float double
 syn keyword scType i0 u0 isize usize int uint
 
