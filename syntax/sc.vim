@@ -15,7 +15,7 @@ syn keyword scRepeat while for
 syn keyword scConstant null nullptr undefined
 syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this operator interface
 syn keyword scType bool f16 f32 f64 f128 void noreturn auto float double
-syn keyword scType i0 u0 isize usize int uint
+syn keyword scType i0 u0 isize usize int uint uintptr
 
 syn keyword scBoolean true false
 
