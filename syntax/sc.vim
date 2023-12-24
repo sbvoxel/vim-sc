@@ -1,5 +1,6 @@
 " Vim syntax file
-" This is clearly adapted (incompletely) from Zig
+" Preliminary syntax file for the Sc language.
+" This was adapted at some point (incompletely) from Zig
 
 if exists("b:current_syntax")
   finish
@@ -12,8 +13,8 @@ syn keyword scStatement break return continue asm defer errdefer unreachable try
 syn keyword scConditional static ef annars if else switch and or orelse case default
 syn keyword scRepeat while for
 
-syn keyword scConstant null nullptr undefined
-syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast cast_unsafe type this operator interface
+syn keyword scConstant null undefined
+syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast type this operator interface
 syn keyword scType bool f16 f32 f64 f128 void noreturn auto float double
 syn keyword scType i0 u0 isize usize int uint uintptr
 
