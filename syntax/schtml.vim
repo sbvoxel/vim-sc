@@ -1,5 +1,4 @@
 " Vim syntax file
-" This is clearly adapted (incompletely) from Zig
 
 runtime! syntax/html.vim
 runtime! syntax/sc.vim
