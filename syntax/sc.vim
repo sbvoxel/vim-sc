@@ -9,7 +9,7 @@ let b:current_syntax = "sc"
 
 syn keyword scStorage const extern packed export pub noalias inline let var volatile align threadlocal nullable
 syn keyword scStructure struct class enum union
-syn keyword scStatement break return continue asm defer errdefer unreachable try catch async await suspend resume cancel when label goto abort assert check
+syn keyword scStatement break return continue yield asm defer errdefer unreachable try catch async await suspend resume cancel when label goto abort assert check
 syn keyword scConditional static if else switch orelse case default
 syn keyword scRepeat while for
 
