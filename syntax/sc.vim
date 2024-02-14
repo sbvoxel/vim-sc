@@ -14,7 +14,7 @@ syn keyword scConditional static if else switch orelse case default
 syn keyword scRepeat while for
 
 syn keyword scConstant null undefined
-syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast type this operator interface
+syn keyword scKeyword fn test use cast reinterpret_cast unsafe_cast type this operator interface trait
 syn keyword scType bool f16 f32 f64 f128 never void auto float double
 syn keyword scType i0 u0 isize usize int uint uintptr
 
