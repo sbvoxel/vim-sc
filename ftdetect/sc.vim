@@ -12,14 +12,12 @@
 " the default scala filetype. I don't have time to figure out the best
 " approach at the moment but this seems fine.
 
-
 function! SetFileTypeSC()
   if &filetype != 'sc'
     set filetype=sc
   endif
 endfunction
 
-" Apply the function for the relevant files
 au BufRead,BufNewFile *.sc call SetFileTypeSC()
 au BufRead,BufNewFile *.sc2 call SetFileTypeSC()
 au BufRead,BufNewFile *.sci call SetFileTypeSC()
