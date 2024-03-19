@@ -1,3 +1,5 @@
+" Adapted from ziglang/zig.vim (MIT)
+"
 " Adapted from fatih/vim-go: autoload/go/fmt.vim
 "
 " Copyright 2011 The Go Authors. All rights reserved.
@@ -29,11 +31,7 @@ function! sc#fmt#Format() abort
     try | silent undojoin | catch | endtry
 
     " Replace the file content with the formatted version.
-    if exists('*deletebufline')
-      call deletebufline(current_buf, len(out), line('$'))
-    else
-      silent execute ':' . len(out) . ',' . line('$') . ' delete _'
-    endif
+    call deletebufline(current_buf, len(out), line('$'))
     call setline(1, out)
 
     " No errors detected, close the loclist.
