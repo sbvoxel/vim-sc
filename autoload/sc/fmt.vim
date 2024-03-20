@@ -19,11 +19,7 @@ function! sc#fmt#Format() abort
   let current_buf = bufnr('')
 
   " The formatted code is output on stdout, the errors go on stderr.
-  if exists('*systemlist')
-    silent let out = systemlist(cmdline, current_buf)
-  else
-    silent let out = split(system(cmdline, current_buf))
-  endif
+  silent let out = systemlist(cmdline, current_buf)
   let err = v:shell_error
 
   if err == 0
