@@ -27,8 +27,14 @@ function! sc#fmt#Format() abort
     try | silent undojoin | catch | endtry
 
     " Replace the file content with the formatted version.
-    call deletebufline(current_buf, len(out), line('$'))
+
+    " 1) Insert new lines from the top
     call setline(1, out)
+
+    " 2) Delete leftover lines if new file is shorter
+    if line('$') > len(out)
+      call deletebufline(current_buf, len(out) + 1, line('$'))
+    endif
 
     " No errors detected, close the loclist.
     call setloclist(0, [], 'r')
