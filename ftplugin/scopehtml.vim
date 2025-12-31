@@ -1,6 +1,4 @@
-" Adapted from Sc's file
-
-if (exists("d:did_ftplugin"))
+if (exists("b:did_ftplugin"))
     finish
 endif
 
@@ -10,5 +8,5 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-setlocal suffixesadd=.schtml
+setlocal suffixesadd=.scopehtml
 setlocal commentstring=//\ %s

@@ -1,12 +1,4 @@
-" Adapted from ziglang/zig.vim (MIT)
-"
-" Adapted from fatih/vim-go: autoload/go/fmt.vim
-"
-" Copyright 2011 The Go Authors. All rights reserved.
-" Use of this source code is governed by a BSD-style
-" license that can be found in the LICENSE file.
-
-function! sc#fmt#Format() abort
+function! scope#fmt#Format() abort
   " Save cursor position and many other things.
   let view = winsaveview()
 
@@ -39,7 +31,7 @@ function! sc#fmt#Format() abort
     " No errors detected, close the loclist.
     call setloclist(0, [], 'r')
     lclose
-  elseif get(g:, 'sc_fmt_parse_errors', 1)
+  elseif get(g:, 'scope_fmt_parse_errors', 1)
     let errors = s:parse_errors(expand('%'), out)
 
     call setloclist(0, [], 'r', {
@@ -47,7 +39,7 @@ function! sc#fmt#Format() abort
         \ 'items': errors,
         \ })
 
-    let max_win_height = get(g:, 'sc_fmt_max_window_height', 5)
+    let max_win_height = get(g:, 'scope_fmt_max_window_height', 5)
     " Prevent the loclist from becoming too long.
     let win_height = min([max_win_height, len(errors)])
     " Open the loclist, but only if there's at least one error to show.
