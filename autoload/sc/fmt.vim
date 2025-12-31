@@ -10,12 +10,12 @@ function! sc#fmt#Format() abort
   " Save cursor position and many other things.
   let view = winsaveview()
 
-  if !executable('scfmt')
-    echohl Error | echomsg "no scfmt binary found in PATH" | echohl None
+  if !executable('scopefmt')
+    echohl Error | echomsg "no scopefmt binary found in PATH" | echohl None
     return
   endif
 
-  let cmdline = 'scfmt' " TODO: Here pass in --stdin so that we can have the option of files instead
+  let cmdline = 'scopefmt' " TODO: Here pass in --stdin so that we can have the option of files instead
   let current_buf = bufnr('')
 
   " The formatted code is output on stdout, the errors go on stderr.
@@ -57,7 +57,7 @@ function! sc#fmt#Format() abort
   call winrestview(view)
 
   if err != 0
-    echohl Error | echomsg "scfmt returned error" | echohl None
+    echohl Error | echomsg "scopefmt returned error" | echohl None
     return
   endif
 
