@@ -29,10 +29,10 @@ syn match scopeBuiltinFn "\v\@(shlWithOverflow|shrExact|sizeOf|sizeof|sqrt|byteS
 syn match scopeBuiltinFn "\v\@(truncate|typeId|typeInfo|typeName|typeOf|typeof|atomicRmw|bytesToSlice|sliceToBytes)>"
 syn match scopeBuiltinFn "\v\@(intToError|errorToInt|intToEnum|enumToInt|setAlignStack|frame|Frame|frameSize|bitReverse|Vector)>"
 
-syn match scopeDecNumber display "\<[0-9]\+\%(.[0-9_]\+\)\=\%([eE][+-]\?[0-9]\+\)\="
-syn match scopeHexNumber display "\<0x[a-fA-F0-9]\+\%([a-fA-F0-9]\+\%([pP][+-]\?[0-9]\+\)\?\)\="
-syn match scopeOctNumber display "\<0o[0-7]\+"
-syn match scopeBinNumber display "\<0b[01]\+\%(.[01]\+\%([eE][+-]\?[0-9]\+\)\?\)\="
+syn match scopeDecNumber display "\v<\d%(_?\d)*%(\.\.@!)?%(\d%(_?\d)*)?%([eE][+-]?\d%(_?\d)*)?"
+syn match scopeHexNumber display "\v<0x\x%(_?\x)*%(\.\.@!)?%(\x%(_?\x)*)?%([pP][+-]?\d%(_?\d)*)?"
+syn match scopeOctNumber display "\v<0o\o%(_?\o)*"
+syn match scopeBinNumber display "\v<0b[01]%(_?[01])*"
 
 
 syn match scopeCharacterInvalid display contained /b\?'\zs[\n\r\t']\ze'/
