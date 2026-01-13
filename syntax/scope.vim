@@ -45,6 +45,8 @@ syn match scopeCharacterInvalidUnicode display contained /b'\zs[^[:cntrl:][:grap
 syn match scopeCharacter /b'\([^\\]\|\\\(.\|x\x\{2}\)\)'/ contains=scopeEscape,scopeEscapeError,scopeCharacterInvalid,scopeCharacterInvalidUnicode
 syn match scopeCharacter /'\([^\\]\|\\\(.\|x\x\{2}\|u\x\{4}\|U\x\{6}\)\)'/ contains=scopeEscape,scopeEscapeUnicode,scopeEscapeError,scopeCharacterInvalid
 
+syn region scopeBlock start="{" end="}" transparent fold
+
 syn region scopeCommentLine start="//" end="$" contains=scopeTodo,@Spell
 syn region scopeCommentLineDoc start="////\@!" end="$" contains=scopeTodo,@Spell
 
