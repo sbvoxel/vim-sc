@@ -7,9 +7,11 @@ if exists("b:current_syntax")
 endif
 let b:current_syntax = "scope"
 
-syn keyword scopeStorage const extern packed export pub noalias inline let var volatile align threadlocal nullable
+syn keyword scopeAccessModifier pub
+syn keyword scopeStorageClass const extern packed export let var volatile align threadlocal nullable
+syn keyword scopePreProc noalias inline
 syn keyword scopeStructure struct class enum union
-syn keyword scopeStatement break return continue yield asm defer errdefer unreachable try catch async await suspend resume cancel when label goto abort assert assert_known check
+syn keyword scopeStatement break return continue yield asm defer errdefer unreachable when label goto abort assert assert_known check
 syn keyword scopeConditional static if else switch orelse case default
 syn keyword scopeRepeat while for
 
@@ -19,6 +21,8 @@ syn keyword scopeType bool f16 f32 f64 f128 never void auto float double
 syn keyword scopeType i0 u0 isize usize int uint uintptr
 
 syn keyword scopeBoolean true false
+syn keyword scopeAsync async await suspend resume cancel
+syn keyword scopeException try catch
 
 syn match scopeType "\v<[iu][1-9]\d*>"
 
@@ -78,8 +82,12 @@ hi def link scopeBoolean Boolean
 hi def link scopeConstant Constant
 hi def link scopeNumber Number
 hi def link scopeOperator Operator
-hi def link scopeStorage StorageClass
+hi def link scopeAccessModifier StorageClass
+hi def link scopeStorageClass StorageClass
 hi def link scopeStructure Structure
 hi def link scopeStatement Statement
 hi def link scopeConditional Conditional
 hi def link scopeRepeat Repeat
+hi def link scopeAsync Keyword
+hi def link scopePreProc PreProc
+hi def link scopeException Exception
