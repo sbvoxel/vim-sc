@@ -1,4 +1,5 @@
 function! SetFileTypeScope()
+  " Avoid setfiletype because other ftdetects may claim *.sc (e.g. Scala/Ammonite).
   if &filetype != 'scope'
     set filetype=scope
   endif
