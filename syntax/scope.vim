@@ -9,7 +9,7 @@ let b:current_syntax = "scope"
 
 syn keyword scopeStorage const extern packed export pub noalias inline let var volatile align threadlocal nullable
 syn keyword scopeStructure struct class enum union
-syn keyword scopeStatement break return continue yield asm defer errdefer unreachable try catch async await suspend resume cancel when label goto abort assert check
+syn keyword scopeStatement break return continue yield asm defer errdefer unreachable try catch async await suspend resume cancel when label goto abort assert assert_known check
 syn keyword scopeConditional static if else switch orelse case default
 syn keyword scopeRepeat while for
 
