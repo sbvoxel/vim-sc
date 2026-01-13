@@ -22,7 +22,7 @@ syn keyword scopeBoolean true false
 
 syn match scopeType "\v<[iu][1-9]\d*>"
 
-syn match scopeOperator display "\%(+%\?\|-%\?\|/\|*%\?\|=\|\^\|&\|?\||\|!\|>\|<\|%\|<<%\?\|>>\)=\?"
+syn match scopeOperator display "\%(+%\?\|-%\?\|/\|*%\?\|=\|\^\|&\|?\||\|!\|>\|<\|%\|<<%\?\|>>\|::\)=\?"
 
 syn match scopeBuiltinFn "\v\@(memcpy|memset|minValue|mod|mulWithOverflow)>"
 syn match scopeBuiltinFn "\v\@(shlWithOverflow|shrExact|sizeOf|sizeof|sqrt|byteSwap|subWithOverflow|intCast|floatCast|intToFloat|floatToInt|boolToInt|errSetCast)>"
