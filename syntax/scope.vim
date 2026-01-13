@@ -26,7 +26,8 @@ syn keyword scopeException try catch
 
 syn match scopeType "\v<[iu][1-9]\d*>"
 
-syn match scopeOperator display "\%(+%\?\|-%\?\|/\|*%\?\|=\|\^\|&\|?\||\|!\|>\|<\|%\|<<%\?\|>>\|::\)=\?"
+syn match scopeOperator display "\V\[-+/*=^&?|!><%~:]"
+syn match scopeArrowCharacter display "\V->"
 
 syn match scopeBuiltinFn "\v\@(memcpy|memset|minValue|mod|mulWithOverflow)>"
 syn match scopeBuiltinFn "\v\@(shlWithOverflow|shrExact|sizeOf|sizeof|sqrt|byteSwap|subWithOverflow|intCast|floatCast|intToFloat|floatToInt|boolToInt|errSetCast)>"
@@ -82,6 +83,7 @@ hi def link scopeBoolean Boolean
 hi def link scopeConstant Constant
 hi def link scopeNumber Number
 hi def link scopeOperator Operator
+hi def link scopeArrowCharacter scopeOperator
 hi def link scopeAccessModifier StorageClass
 hi def link scopeStorageClass StorageClass
 hi def link scopeStructure Structure
